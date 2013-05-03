@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>4399前端组</title>
+<link href="http://ks.4399ued.com/assets/css/ks.min.css" rel="stylesheet"/>
+<style>
+	.ued_box{ width:960px;margin:100px auto 20px;padding:20px; background:#fff;}
+	.ued_box p{ line-height:2;text-indent:2em;}
+
+	.fe_box{ /*border:1px solid #eee;background:#fafafa;*/padding:10px;font-size:12px;margin-bottom:20px;}
+	
+	.fe_box h2{ color:#f00;font-size:16px;margin-bottom:10px;}
+	.fe_list{ line-height:28px;font-size:14px;}
+
+</style>
+</head>
+
+<body>
+	<!--ued_box-->
+	<div class="ued_box">
+		<!--m_qr-->
+		<div class="m_qr">
+			<label>请输入网址：</label>
+			<input type="url" value="" id="j-url"/>
+			<input type="button" value="生成QR图" id="j-btn-qr"/>
+		</div>
+		<!--/m_qr-->
+		<!--m_qr_code-->
+		<div class="m_qr_code">
+			<img src="" id="j-qr-img"/>
+		</div>
+		<!--/m_qr_code-->
+	</div>
+	<!--/ued_box-->
+
+
+<script type="text/javascript">
+
+function QRcode(){
+	
+	document.getElementById('j-btn-qr').onclick = function(){
+		var _url = document.getElementById('j-url').value;
+		document.getElementById('j-qr-img').src="https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=L|4&chl="+_url;
+	};
+}
+QRcode();
+</script>
+</body>
+</html>
