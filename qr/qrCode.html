@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>网址二维码生成器 4399UED</title>
+<link href="http://ks.4399ued.com/assets/css/ks.min.css" rel="stylesheet"/>
+<style>
+	.m_qr{ width:400px; margin-top:20px;}
+	.m_qr .ks_item{ padding-left:100px;margin-bottom:20px;}
+	.m_qr .ks_field{ width:90px;margin-left:-100px; font-size:12px;font-family:"microsoft yahei";line-height:34px;}
+	.m_qr .ks_ipt{ height:24px;width:200px;}
+	.m_btn_qr{ padding:0 10px;height:34px;text-align:center;color:#fff;line-height:34px;background:#65cffb;border:0 none;cursor:pointer;}
+	.m_version{margin-top:50px;}
+	.m_history{ margin-top:20px;color:#333;line-height:2;}
+	.m_history dd{ padding-left:2em;}
+	.m_tip{ color:#f00;margin-top:5px;font-size:12px;}
+</style>
+</head>
+
+<body>
+	<!--m_qr-->
+	<div class="m_qr">
+		<fieldset class="ks_form">
+			<legend>二维码生成器</legend>
+			<div class="ks_item">
+				<label class="ks_field">请输入网址：</label>
+				<div class="ks_w">
+					<input type="url" class="ks_ipt" id="j-url"/>
+					<input type="button" value="生成QR图" id="j-btn-qr" class="m_btn_qr"/>
+					<p class="m_tip" id="j-tip" data-tip="注：地址栏不能为空"></p>
+				</div>
+			</div>
+			<div class="ks_item">
+				<label class="ks_field">二维码预览图：</label>
+				<div class="ks_w">
+					<p id="j-qr-url"></p>
+					<img src="https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=L|4&chl=http://qr.4399ued.com" id="j-qr-img"/>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	<!--/m_qr-->
+<script type="text/javascript" src="qrcode.js"></script>
+</body>
+</html>
