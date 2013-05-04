@@ -2,49 +2,64 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>4399前端组</title>
+<title>网址二维码生成器</title>
 <link href="http://ks.4399ued.com/assets/css/ks.min.css" rel="stylesheet"/>
 <style>
-	.ued_box{ width:960px;margin:100px auto 20px;padding:20px; background:#fff;}
-	.ued_box p{ line-height:2;text-indent:2em;}
-
-	.fe_box{ /*border:1px solid #eee;background:#fafafa;*/padding:10px;font-size:12px;margin-bottom:20px;}
-	
-	.fe_box h2{ color:#f00;font-size:16px;margin-bottom:10px;}
-	.fe_list{ line-height:28px;font-size:14px;}
-
+	.m_sideline{ position:fixed;left:0;top:0;bottom:0;width:4px;background:#65cffb;}
+	.m_qr{ width:800px;margin:50px auto;}
+	.m_qr .ks_item{ padding-left:150px;margin-bottom:40px;}
+	.m_qr .ks_field{ width:140px;margin-left:-150px; font-size:20px;font-family:"microsoft yahei";line-height:34px;}
+	.m_qr .ks_ipt{ height:34px;width:300px;}
+	.m_btn_qr{ width:110px;height:45px;text-align:center;color:#fff;line-height:45px;background:#65cffb;border:0 none;cursor:pointer;}
+	.m_version{margin-top:50px;}
+	.m_history{ margin-top:20px;color:#333;line-height:2;}
+	.m_history dd{ padding-left:2em;}
 </style>
 </head>
 
 <body>
-	<!--ued_box-->
-	<div class="ued_box">
-		<!--m_qr-->
-		<div class="m_qr">
-			<label>请输入网址：</label>
-			<input type="url" value="" id="j-url"/>
-			<input type="button" value="生成QR图" id="j-btn-qr"/>
+	<!--m_qr-->
+	<div class="m_qr">
+		<fieldset class="ks_form">
+			<legend>二维码生成器</legend>
+			<div class="ks_item">
+				<label class="ks_field">请输入网址：</label>
+				<div class="ks_w">
+					<input type="text" class="ks_ipt" id="j-url"/>
+					<input type="button" value="生成QR图" id="j-btn-qr" class="m_btn_qr"/>
+				</div>
+			</div>
+			<div class="ks_item">
+				<label class="ks_field">二维码预览图：</label>
+				<div class="ks_w">
+					<p id="j-qr-url"></p>
+					<img src="https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=L|4&chl=http://qr.4399ued.com" id="j-qr-img"/>
+				</div>
+			</div>
+		</fieldset>
+		<!--m_version-->
+		<div class="m_version">
+			<h2>更新版本：</h2>
+			<dl class="m_history">
+				<dt>2013.05.04</dt>
+				<dd>基于seajs对JS进行重构</dd>
+			</dl>
+			<dl class="m_history">
+				<dt>2013.05.03</dt>
+				<dd>第一版</dd>
+			</dl>
 		</div>
-		<!--/m_qr-->
-		<!--m_qr_code-->
-		<div class="m_qr_code">
-			<img src="" id="j-qr-img"/>
-		</div>
-		<!--/m_qr_code-->
+		<!--/m_version-->
 	</div>
-	<!--/ued_box-->
+	<!--/m_qr-->
 
-
-<script type="text/javascript">
-
-function QRcode(){
+	<!--m_sideline-->
+	<div class="m_sideline"></div>
+	<!--/m_sideline-->
 	
-	document.getElementById('j-btn-qr').onclick = function(){
-		var _url = document.getElementById('j-url').value;
-		document.getElementById('j-qr-img').src="https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=L|4&chl="+_url;
-	};
-}
-QRcode();
+<script src="sea.js"></script>
+<script type="text/javascript">
+seajs.use('qr.js');
 </script>
 </body>
 </html>
