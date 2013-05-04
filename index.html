@@ -15,6 +15,9 @@
 	.m_history{ margin-top:20px;color:#333;line-height:2;}
 	.m_history dd{ padding-left:2em;}
 	.m_tip{ color:#f00;margin-top:5px;}
+	.m_chrome a{ background:#65b5f8;display:inline-block;padding:0 10px;height:32px;line-height:32px;color:#fff;}
+	.m_chrome a:hover{ background:#f00;text-decoration:none;}
+	.m_chrome dl{ margin-top:10px;}
 </style>
 </head>
 
@@ -39,12 +42,23 @@
 				</div>
 			</div>
 		</fieldset>
+		<!--m_chrome-->
+		<div class="m_chrome">
+			<a href="qr.crx">chrome二维码生成器v0.1</a>
+			<dl>
+				<dt>安装方法：</dt>
+				<dd>1:在chrome浏览器访问chrome://extensions/进入扩展应用界面。</dd>
+				<dd>2:把下载的chrome插件拖进窗体即可安装。</dd>
+			</dl>
+		</a>
+		<!--/m_chrome-->
 		<!--m_version-->
 		<div class="m_version">
 			<h2>更新版本：</h2>
 			<dl class="m_history">
 				<dt>2013.05.04</dt>
 				<dd>v0.11 基于seajs对JS进行重构</dd>
+				<dd>Chrome二维码生成器 v0.1</dd>
 			</dl>
 			<dl class="m_history">
 				<dt>2013.05.03</dt>
