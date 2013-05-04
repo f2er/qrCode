@@ -14,6 +14,7 @@
 	.m_version{margin-top:50px;}
 	.m_history{ margin-top:20px;color:#333;line-height:2;}
 	.m_history dd{ padding-left:2em;}
+	.m_tip{ color:#f00;margin-top:5px;}
 </style>
 </head>
 
@@ -25,8 +26,9 @@
 			<div class="ks_item">
 				<label class="ks_field">请输入网址：</label>
 				<div class="ks_w">
-					<input type="text" class="ks_ipt" id="j-url"/>
+					<input type="url" class="ks_ipt" id="j-url"/>
 					<input type="button" value="生成QR图" id="j-btn-qr" class="m_btn_qr"/>
+					<p class="m_tip" id="j-tip" data-tip="注：地址栏不能为空"></p>
 				</div>
 			</div>
 			<div class="ks_item">
