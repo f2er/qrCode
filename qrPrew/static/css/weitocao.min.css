@@ -1,0 +1,489 @@
+@import "ks.min.css";
+/*
+ * author : 情封
+ * Time   : 2012-10-26
+*/
+html,
+body {
+  /*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=) repeat;*/
+
+  background-color: #f8f8f8;
+}
+/*
+ * @mod_wtc_list 内容
+*/
+.mod_wtc_list {
+  width: 600px;
+  margin-left: 400px;
+  /*padding-top:4*@baseNum;*/
+}
+.m_wtc_list {
+  background: #fff;
+  margin-bottom: 30px;
+  position: relative;
+  border-left: 1px solid #ddd;
+}
+.m_wtc_list time {
+  position: absolute;
+  left: -100px;
+  top: -10px;
+  color: #333;
+  font-weight: 500;
+}
+.m_wtc_list time .m_day {
+  font-size: 40px;
+  margin-right: 5px;
+  font-family: "Gabriola";
+}
+.m_wtc_list time .m_month {
+  font-size: 30px;
+  font-family: "Gabriola";
+}
+.m_wtc_list .m_wtc {
+  padding: 20px 40px 40px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #333;
+  position: relative;
+}
+.m_wtc_list .m_wtc .content {
+  /*font-family:"microsoft yahei";*/
+
+}
+.m_wtc_list .m_wtc .content a {
+  color: #50b7dc;
+}
+.m_wtc_list .m_wtc .ac {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+}
+.m_wtc_list .m_wtc .ac span {
+  margin-left: 10px;
+}
+.m_wtc_list .m_wtc .ac a {
+  color: #50b7dc;
+  display: none;
+}
+.m_wtc_list .m_wtc .doted {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 24px;
+  position: absolute;
+  left: -12px;
+  top: 20px;
+  background: #fff;
+}
+.m_wtc_list .m_wtc .doted.odd {
+  border: 2px solid #45954b;
+}
+.m_wtc_list .m_wtc .doted.even {
+  border: 2px solid #f00;
+}
+.m_wtc_list .m_wtc:hover .ac a {
+  display: inline-block;
+}
+/*
+ * @mod_aside 左侧栏
+*/
+.mod_aside {
+  position: fixed;
+  width: 250px;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  background: #50b7dc;
+  padding-top: 20px;
+}
+.mod_aside .m_title {
+  text-align: center;
+  font-family: "Consolas";
+  color: #fff;
+}
+.mod_aside .m_title h1 {
+  font-size: 68px;
+}
+.mod_aside .m_title h1 span {
+  color: #1291bb;
+}
+.mod_aside .m_title h1 a {
+  color: #fff;
+}
+.mod_aside .m_title h1 a:hover {
+  text-decoration: none;
+}
+.mod_aside .m_title h2 {
+  font-size: 40px;
+  font-family: "microsoft yahei";
+  margin-top: -30px;
+}
+.mod_aside .m_title p {
+  font-size: 24px;
+  margin-top: -10px;
+}
+.mod_aside .m_nav {
+  margin-top: 40px;
+}
+.mod_aside .m_nav a {
+  display: block;
+  width: 230px;
+  height: 44px;
+  color: #fff;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 700;
+  line-height: 44px;
+  padding-left: 20px;
+  margin-bottom: 2px;
+}
+.mod_aside .m_nav a:hover,
+.mod_aside .m_nav a.cur {
+  text-decoration: none;
+  background-color: #f8f8f8;
+  color: #50b7dc;
+  border-left: 4px solid #f00;
+  position: relative;
+  left: -4px;
+}
+/*
+ * @mod_guest 游客模式
+*/
+.mod_guest {
+  position: fixed;
+  right: 0;
+  top: 40px;
+  z-index: 100;
+}
+.mod_guest .m_guest {
+  width: 80px;
+  height: 40px;
+  display: inline-block;
+  background: #b8ae0f;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.mod_guest .m_guest_box {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 400px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  display: none;
+}
+.mod_guest .m_guest_box h2 {
+  color: #50b7dc;
+  font-size: 24px;
+}
+.mod_guest .m_guest_box h2 span {
+  color: #9a634b;
+  font-family: "Consolas";
+}
+.mod_guest .m_guest_box .comment textarea {
+  padding: 5px;
+  width: 375px;
+  height: 120px;
+  border: 1px solid #ddd;
+  resize: none;
+}
+.mod_guest .m_guest_box .comment textarea:focus {
+  border: 1px solid #50b7dc;
+}
+.mod_guest .m_guest_box .ac .btn_tc {
+  float: right;
+  width: 120px;
+  height: 32px;
+  background: #50b7dc;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  margin-right: 10px;
+}
+.mod_guest .m_guest_box .ac .attention {
+  float: left;
+  margin-top: 5px;
+  position: relative;
+}
+.mod_guest .m_guest_box .ac .attention .tip_word {
+  color: #f00;
+  margin-bottom: 5px;
+}
+.mod_guest .m_guest_box .ac .attention .tip {
+  color: #999;
+  line-height: 20px;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  border: 1px solid #f00;
+  background: #fff;
+  width: 250px;
+  height: 50px;
+  display: none;
+}
+.mod_guest .m_guest_box .m_tip {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #f00;
+  display: none;
+}
+/*
+ * @mod_article 详细页
+*/
+.mod_article {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+.mod_article h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+.mod_article .content {
+  line-height: 24px;
+  padding: 30px 0;
+  width: 100%;
+}
+.mod_article .content p {
+  text-indent: 2em;
+  margin-bottom: 10px;
+}
+.mod_article .desc {
+  text-align: right;
+  color: #999;
+}
+/*
+ * @注册、登录
+*/
+.mod_login,
+.mod_register {
+  position: fixed;
+  width: 300px;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.mod_login .ks_form,
+.mod_register .ks_form {
+  padding: 100px 0 0 35px;
+}
+.mod_login .ks_form .ks_item,
+.mod_register .ks_form .ks_item {
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+.mod_login .ks_form .ks_field,
+.mod_register .ks_form .ks_field {
+  float: none;
+  padding-left: 0;
+  margin-left: 0;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.mod_login .ks_form .ks_ipt,
+.mod_register .ks_form .ks_ipt {
+  background: #25282b;
+  border: 1px solid #afafaf;
+  color: #fff;
+}
+.mod_login .ks_form .ks_act,
+.mod_register .ks_form .ks_act {
+  padding-left: 0;
+}
+.mod_login .ks_form .ks_btn,
+.mod_register .ks_form .ks_btn {
+  background: #3383af;
+  width: 120px;
+}
+.btn_register {
+  font-size: 16px;
+  color: #fff;
+  margin: 50px 0 0 35px;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn_register:hover {
+  color: #3383af;
+  text-decoration: none;
+}
+.mod_register {
+  right: -300px;
+}
+.mod_register .ks_form .ks_btn {
+  background: #ff8500;
+}
+.mod_login_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/*
+ * @m_share 分享、吐槽
+*/
+.m_share {
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.m_share h2 {
+  padding: 25px 30px;
+  font-weight: normal;
+  font-size: 32px;
+  font-family: "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "微软雅黑", tahoma, arial, simhei, "黑体";
+}
+.m_share .bd {
+  padding-bottom: 20px;
+}
+.m_share .ks_item {
+  padding: 10px 0 10px 200px;
+}
+.m_share .ks_item .ks_field {
+  margin-left: -200px;
+  width: 180px;
+}
+.m_share .ks_act {
+  padding-left: 200px;
+}
+.m_share .ks_act .ks_btn {
+  background: #50b7dc;
+}
+.m_share .m_desc {
+  line-height: 2;
+  font-size: 14px;
+  padding-left: 25px;
+  margin-top: 20px;
+}
+/*
+ * @mod_admin 管理左侧
+*/
+.mod_admin {
+  width: 120px;
+  padding-left: 20px;
+}
+.mod_admin .m_user {
+  line-height: 2;
+  color: #fff;
+}
+.mod_admin .m_user dt {
+  margin-bottom: 20px;
+}
+.mod_admin .m_user dt img {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #50b7dc;
+  border-radius: 80px;
+}
+.mod_admin .m_user a {
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+}
+.mod_admin .m_user a:hover {
+  text-decoration: none;
+}
+.mod_admin nav {
+  width: 50px;
+  margin-top: 50px;
+}
+.mod_admin nav a {
+  display: block;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 16px;
+  border: 2px solid #50b7dc;
+  border-radius: 70px;
+}
+.mod_admin nav a span {
+  display: block;
+  cursor: pointer;
+  width: 70px;
+  height: 30px;
+  margin: 0 auto 10px;
+  font-size: 30px;
+}
+.mod_admin nav a:hover {
+  border: 2px solid #fff;
+  text-decoration: none;
+}
+/*
+ * @mod_list 管理列表
+*/
+.mod_list {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 20px;
+}
+.mod_list caption {
+  display: none;
+}
+.mod_list thead th {
+  padding: 2%;
+}
+.mod_list thead .ks_t1 {
+  width: 10%;
+  text-align: center;
+}
+.mod_list thead .ks_t2 {
+  width: 72%;
+}
+.mod_list thead .ks_t4 {
+  width: 10%;
+}
+.mod_list tbody tr:hover td {
+  background: #dee1df;
+}
+.mod_list tbody td {
+  border-bottom: 0 none;
+  padding: 10px 0;
+}
+.mod_list tbody td.m_order {
+  text-align: center;
+}
+.mod_list tbody td a {
+  padding: 5px;
+}
+.mod_admin_list {
+  margin-left: 200px;
+  width: 80%;
+}
+/*
+ * 表情图标
+*/
+.icon-emo-thumbsup:before {
+  margin-right: 10px;
+}
+/* '' */
+.mod_article_box {
+  /*margin-left:300px;*/
+  margin: 0 auto 0 300px;
+  width: 70%;
+}
+.m_total {
+  position: fixed;
+  right: -87px;
+  top: 0;
+  height: 40px;
+  line-height: 40px;
+  background: #50b7dc;
+  padding: 0 10px;
+  color: #fff;
+  z-index: 10;
+}
+.m_total span {
+  color: #fff;
+}

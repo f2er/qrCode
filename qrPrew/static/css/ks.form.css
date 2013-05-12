@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document 
+Use for:	表单
+Version:	1.0
+Date:		2012/11/28
+Author:		情封
+*/
+
+/*ks_form*/
+.ks_form legend{ display:none;}
+.ks_form .ks_item{ margin-bottom:10px;padding-left:100px;}
+.ks_form .ks_field{ float:left; width:90px;margin-left:-100px;text-align:right;line-height:32px;}
+.ks_form .ks_ipt{ width:220px;height:22px;padding:4px;border:1px solid #ddd;color:#333;font-size:14px;outline:0;}
+.ks_form .ks_select{ padding:4px;width:230px;border:1px solid #ddd;}
+.ks_form .ks_ds{font-family:Tahoma;font-size:12px;}
+.ks_form .ks_ds input{ margin:2px 5px 0 0;vertical-align:-2px;margin-bottom:1px;}
+.ks_form .ks_label .ks_field{ line-height:26px;}
+.ks_form .ks_area{ width:400px;height:200px;border:1px solid #ddd;resize:none;padding:4px;font-size:12px;}
+.ks_form .ks_area:focus{ outline:none;}
+.ks_form .ks_act{ padding-left:100px;zoom:1;}
+.ks_form .ks_btn{ background:url(../images/demo/form_btn.png) no-repeat;width:181px;height:52px;line-height:52px;font-size:22px;color:#fff;border:none;cursor:pointer;}
+.ks_form .ks_txt{ margin-left:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

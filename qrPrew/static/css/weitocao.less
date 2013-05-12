@@ -1,0 +1,211 @@
+/*
+ * author : 情封
+ * Time   : 2012-10-26
+*/
+
+@import "ks.min.css";
+
+@baseColor : #50b7dc;
+@baseNum : 10px;
+
+html,body{ /*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=) repeat;*/
+      background-color:#f8f8f8;
+}
+/*
+ * @mod_wtc_list 内容
+*/
+.mod_wtc_list{ width:600px;margin-left:40*@baseNum;/*padding-top:4*@baseNum;*/ }
+.m_wtc_list{   background:#fff; margin-bottom:3*@baseNum; position: relative;border-left:1px solid #ddd;
+        time{ position: absolute; left:-100px; top:-10px; color:#333;font-weight:500;
+            .m_day{ font-size:40px; margin-right:5px;font-family:"Gabriola"; }
+            .m_month{ font-size:30px;font-family:"Gabriola"; }
+        }
+        .m_wtc{ padding:2*@baseNum 4*@baseNum 4*@baseNum; font-size:16px; line-height: 28px; color:#333; position:relative;
+            .content{ /*font-family:"microsoft yahei";*/
+                a{color:@baseColor;}
+            }
+            .ac{ text-align: right;font-size:12px; color:#999;
+                span{ margin-left:@baseNum; }
+                a{ color:@baseColor;display: none; }
+            }
+            .doted { width:2*@baseNum;height:@baseNum*2;display:block;border-radius:24px; position:absolute;left:-12px;top:20px;
+                     background:#fff;
+                &.odd{ border:2px solid #45954b; }
+                &.even{ border:2px solid #f00;}
+            }
+            &:hover{
+              .ac{
+                a{ display: inline-block;}
+              }
+            }
+        }
+    }
+
+/*
+ * @mod_aside 左侧栏
+*/
+.mod_aside{ position: fixed; width:250px; left:10px; top:0; bottom:0; background:@baseColor; padding-top:2*@baseNum;
+    .m_title{ text-align:center;font-family:"Consolas";color:#fff;
+        h1{ font-size:68px;
+            span{ color:#1291bb; }
+            a{ color:#fff;
+                &:hover{ text-decoration: none; }
+            }
+        }
+        h2{ font-size:40px;font-family:"microsoft yahei";margin-top:-3*@baseNum; }
+        p{ font-size:24px;margin-top:-@baseNum;}
+    }
+    .m_nav{ margin-top:4*@baseNum;
+        a{  display:block; width:230px;height:44px; color:#fff; font-size:20px;text-align:left;font-weight:700;
+           line-height:44px;padding-left:20px;margin-bottom:2px;
+            &:hover,&.cur{ text-decoration: none;background-color:#f8f8f8;color:@baseColor;border-left:4px solid #f00;position: relative;left:-4px; }
+        }
+    }
+}
+
+/*
+ * @mod_guest 游客模式
+*/
+.mod_guest{ position: fixed; right:0; top:40px;z-index:100;
+    .m_guest{ width:80px;height:40px;display: inline-block;background:#b8ae0f; color:#fff; font-size:14px; text-align:center;
+        line-height:40px;cursor: pointer;
+    }
+    .m_guest_box{ position: absolute;right:0;top:40px;width:400px; background:#fff; border:1px solid #ddd;padding:@baseNum;display:none;
+        h2{ color:#50b7dc;font-size:24px;
+              span{ color:#9a634b; font-family:"Consolas";}
+        }
+        .comment{
+            textarea{  padding:5px;width:375px;height:120px;border:1px solid #ddd;resize:none;
+                &:focus{ border:1px solid @baseColor;}
+            }
+        }
+        .ac{
+            .btn_tc{ float:right; width:120px;height:32px; background:@baseColor;cursor:pointer;color:#fff;border:none;
+                margin-right:@baseNum;
+            }
+            .attention{ float:left;margin-top:5px;position:relative;
+              .tip_word{ color:#f00;margin-bottom:5px; }
+              .tip{ color:#999; line-height: 20px;position:absolute;left:0;top:25px;border:1px solid #f00;background:#fff;width:250px;height:50px;display:none;}
+            }
+        }
+        .m_tip{ position: absolute;right:20px;top:20px;color:#f00;display: none;}
+    }
+}
+
+/*
+ * @mod_article 详细页
+*/
+.mod_article{ background:#fff;border:1px solid #ddd;padding:2*@baseNum;
+    h2{ font-size:24px;color:#333;text-align:center;}
+    .content{ line-height:24px;padding:3*@baseNum 0; width:100%;
+        p{ text-indent:2em;margin-bottom:@baseNum; }
+    }
+    .desc{ text-align:right; color:#999;}
+}
+
+
+/*
+ * @注册、登录
+*/
+.mod_login,.mod_register{ position:fixed;width:300px;top:0;right:0;height:100%;background:rgba(0,0,0,0.8);
+    .ks_form{ padding:100px 0 0 35px;
+      .ks_item{ padding-left:0;margin-bottom:30px;}
+      .ks_field{ float: none;padding-left:0;margin-left:0;font-size:16px;color:#fff;display: block;
+        margin-bottom:10px;text-align: left;}
+      .ks_ipt{ background: #25282b;border:1px solid #afafaf;color:#fff;}
+      .ks_act{ padding-left:0;}
+      .ks_btn{ background: #3383af;width:120px;}
+    }
+}
+
+.btn_register{ font-size: 16px;color:#fff;margin:50px 0 0 35px;display:inline-block;cursor:pointer;
+  &:hover{ color:#3383af;text-decoration: none;}
+}
+
+.mod_register{ right:-300px;
+    .ks_form{
+      .ks_btn{ background:#ff8500}
+    }
+}
+
+.mod_login_img{ position: absolute;left:0;top:0;width:100%;height:100%;overflow: hidden;}
+
+
+/*
+ * @m_share 分享、吐槽
+*/
+.m_share{ border:1px solid #ddd;background:#fff;
+    h2{ padding:25px 30px;font-weight:normal;font-size:32px;
+        font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","微软雅黑",tahoma,arial,simhei,"黑体";
+    }
+    .bd{ padding-bottom:20px;}
+    .ks_item{ padding:10px 0 10px 200px;
+        .ks_field{ margin-left:-200px;width:180px;}
+    }
+    .ks_act{
+        padding-left:200px;
+      .ks_btn{ background:@baseColor;}
+    }
+    .m_desc{ line-height:2; font-size:14px;padding-left:25px;margin-top:@baseNum*2;
+
+    }
+}
+
+/*
+ * @mod_admin 管理左侧
+*/
+.mod_admin{ width:120px;padding-left:20px;
+    .m_user{ line-height: 2;color:#fff;
+        dt{ margin-bottom:2*@baseNum;
+            img{ width:80px;height:80px;border:2px solid @baseColor;border-radius: 80px;}
+        }
+        a{ color:#fff;display:block;margin-bottom:@baseNum;
+            &:hover{ text-decoration: none;}
+        }
+    }
+    nav{ width:50px;margin-top:5*@baseNum;
+        a{ display:block;text-align:center; width:70px; height:70px;margin-bottom:@baseNum*2;color:#fff;font-size:16px;border:2px solid @baseColor;
+          border-radius:70px;
+           span{ display:block;cursor: pointer;width:70px;height:30px;margin:0 auto 10px;font-size:30px; }
+           &:hover{ border:2px solid #fff;text-decoration: none;}
+        }
+    }
+}
+
+/*
+ * @mod_list 管理列表
+*/
+.mod_list{ border:1px solid #ddd;background:#fff; padding:20px;
+    caption{ display: none;}
+    thead{
+      th{ padding:2%}
+      .ks_t1{ width:10%;text-align: center;}
+      .ks_t2{ width:72% }
+      .ks_t4{ width:10%;}
+    }
+    tbody{
+        tr{
+          &:hover td{
+            background:#dee1df;
+          }
+        }
+        td{ border-bottom:0 none;padding:10px 0;
+            &.m_order{text-align:center;}
+            a{ padding:5px;}
+        }
+    }
+}
+
+.mod_admin_list{ margin-left:200px;width:80%}
+
+/*
+ * 表情图标
+*/
+.icon-emo-thumbsup:before { margin-right:10px; } /* '' */
+
+
+.mod_article_box{ /*margin-left:300px;*/ margin:0 auto 0 300px;width:70%;}
+
+.m_total{ position: fixed;right:-87px;top:0;height:40px;line-height:40px;background:#50b7dc;padding:0 10px;color:#fff;z-index:10;
+  span{ color:#fff;}
+}
