@@ -1,39 +1,40 @@
 <?php
 
-	$configArr = array( 'host'=>'localhost','name'=>'root','pwd'=>'xxx','db'=>'db_qrprew');
+	$configArr = array( 'host'=>'192.168.50.117','name'=>'root','pwd'=>'root','db'=>'aaa');
 	//Connect
 	function Connect(){
 		global $configArr;
 		@ $connect = new mysqli( $configArr['host'],$configArr['name'],$configArr['pwd'],$configArr['db'] );
 		$connect->query(" set names 'utf8'");
 		if( mysqli_connect_errno() ){
+			printf("Connect failed: %s\n", $connect->connect_error);
 			exit;
 		}
 		return $connect;
 	}
 	
-	//query
-	function querySql($sql,$charset="utf8"){
+	//增加图片
+	function addPic($file){
 		$conn = Connect();
+		$sql = "insert into c(`img`) values('".addslashes($file)."')";
 		$result = $conn->query($sql);
-		
-		if( !$result ){
-			$conn->close();
-			exit;
-		}
-		$conn->close();
-		return $result;
+		echo $conn->error;
+		$id = $conn->insert_id;
+		return $id;
 	}
 
     /*
-     * 返回地址
-     * */
-    function queryurl($url){
-        $urlSql = "select url from tb_prew where url ='".$url."'";
-        $urlResult = querySql($urlSql);
-        if( $urlResult ){
-            $rs = $urlResult->fetch_array();
-            return $rs['url'];
+     * 返回图片信息
+     */
+    function getPic($id){
+    	$conn = Connect();
+		$id = intval($id);
+        $sql = "select * from c where id=$id";
+        $result = $conn->query($sql);
+
+        if($result){
+            $rs = $result->fetch_array(MYSQLI_ASSOC);
+            return $rs['img'];
         }
     }
 

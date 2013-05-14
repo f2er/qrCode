@@ -25,7 +25,7 @@
                         _reader.readAsDataURL(_file);
                         _reader.onload = function(){
                             $.post("reader.php",{"fileUrl":this.result},function(data){
-                                if(data.code == 100 ){
+                                if(data.code == 100){
                                     qrPrew.qrImg(data.url);
                                 }
                             },'json');
