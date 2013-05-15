@@ -1,6 +1,6 @@
 <?php
 
-	$configArr = array( 'host'=>'192.168.50.117','name'=>'root','pwd'=>'root','db'=>'aaa');
+	$configArr = array( 'host'=>'127.0.0.1','name'=>'root','pwd'=>'root','db'=>'db_prew');
 	//Connect
 	function Connect(){
 		global $configArr;
